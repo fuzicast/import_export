@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ImportExport::VERSION
   spec.authors       = ["Yue Jiang"]
   spec.email         = ["grep.yue@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Allows conversion between two data files}
+  spec.description   = %q{Convert CSV to JSON}
   spec.homepage      = ""
   spec.license       = "MIT"
 

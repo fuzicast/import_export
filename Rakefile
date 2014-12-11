@@ -5,8 +5,8 @@ task :test do
 end
 
 task :run do
-  ruby './bin/run'
+  ruby './bin/import_export'
 end
 
-task :default => 'test'
+task :default => ['test']
 

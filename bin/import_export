@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/import_export'
-require_relative '../lib/csv_importer'
-require_relative '../lib/json_exporter'
+require 'import_export'
+require 'csv_importer'
+require 'json_exporter'
 
 I18n.enforce_available_locales = false
 csv_importer = CSVImporter.new(input_file: File.expand_path('./data/input.csv'), header: 1)
