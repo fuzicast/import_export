@@ -23,7 +23,7 @@ Or install it yourself as:
 ### Run rspec tests
     $ rspec
 
-### Test run `import_export`
+### Test run import_export
     $ ruby -Ilib import_export
 
 ## Contributing
