@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ### Run rspec tests
-    $ rspec
+    $ rake
 
 ### Test run import_export
     $ ruby -Ilib import_export

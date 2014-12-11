@@ -1,12 +1,7 @@
-require "bundler/gem_tasks"
-
-task :test do
-  p 'jelll'
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
 end
 
-task :run do
-  ruby './bin/import_export'
-end
-
-task :default => ['test']
-
+task :default => :spec
