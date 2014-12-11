@@ -3,11 +3,6 @@ require_relative './object_mapping'
 module ItemMapping
   include ObjectMapping
 
-#  def self.convert(importer, exporter)
-#    objects = self.encode_objects(importer.import)
-#    self.decode_objects(exporter.export(objects))
-#  end
-
   def self.encode_objects(data)
     item_array = []
     data.each do |row|
@@ -30,7 +25,7 @@ module ItemMapping
   end
 
   def self.decode_objects(objects)
-    json_output = []
+    data_output = []
     objects.each do |object|
       object_as_hash = {
         id: object.id,
@@ -41,9 +36,9 @@ module ItemMapping
         quantity_on_hand: object.quantity_on_hand,
         modifiers: object.modifiers
       }
-      json_output.push(object_as_hash)
+      data_output.push(object_as_hash)
     end
-    json_output.to_json
+    data_output
   end
   
 end
