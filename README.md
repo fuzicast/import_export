@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Run rspec tests
+    $ rspec
+
+### Test run `import_export`
+    $ ruby -Ilib import_export
 
 ## Contributing
 
