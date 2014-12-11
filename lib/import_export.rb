@@ -1,14 +1,14 @@
-require "import_export/version"
+require_relative "./import_export/version"
 require_relative './item'
-require_relative './csv_importer'
-require_relative './json_exporter'
 require_relative './item_mapping'
 
 module ImportExport
-  include CSVImporter
-  include ItemMapping
-  def self.csv_to_json(input_file, output_file)
-    file_content = CSVImporter.import(input_file)
-    item_array = ItemMapping.from_csv(file_content, header: 1)
+
+  # Use dependency injection so this method is easier to test
+  def self.convert_data(importer:, exporter:)
+    file_content = importer.import
+    objects = ItemMapping.encode_objects(file_content)
+    data = ItemMapping.decode_objects(objects)
+    exporter.export(data)
   end
 end
