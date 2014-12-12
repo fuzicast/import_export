@@ -26,6 +26,13 @@ Or install it yourself as:
 ### Test run import_export
     $ ruby -Ilib import_export
 
+### Example
+```
+csv_importer = CSVImporter.new(input_file: './data/input.csv', header: 1)
+json_exporter = JSONExporter.new(output_file: './output.json')
+ImportExport.convert_data(importer: csv_importer, exporter: json_exporter)
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/import_export/fork )
